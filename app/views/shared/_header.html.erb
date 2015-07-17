@@ -1,0 +1,5 @@
+<header>
+  <% if session[:user_id] %>
+    <%= link_to "logout", '/logout' %>
+  <% end %>
+</header>

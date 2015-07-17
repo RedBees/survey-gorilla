@@ -1,0 +1,13 @@
+<h2>Welcome to Survey Gorilla</h2>
+
+<%= form_tag controller: 'sessions', action: :create do %>
+  <div class="form_fields">
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+  </div>
+  <div class="form_fields">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <%= submit_tag "Login" %>
+<% end %>
