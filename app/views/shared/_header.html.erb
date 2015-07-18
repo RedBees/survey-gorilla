@@ -1,13 +1,7 @@
 <header>
   <% if session[:user_id] %>
-<<<<<<< Updated upstream
-=======
   <%= link_to "Create Survey", new_survey_path %>
   <%= link_to "Profile", user_path(session[:user_id]) %>
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     <%= link_to "logout", '/logout' %>
   <% end %>
 </header>
