@@ -1,1 +1,19 @@
-<%= @generated.survey.title %>
+<%= @generated_survey.survey.title %>
+<h2><%= @generated_survey.survey.title %></h2>
+<%= form_tag taken_survey_path do %>
+  <div class="questions">
+    <% @generated_survey.survey.questions.each do |question| %>
+      <%= question.body %>
+      <div class="choices">
+        <% question.choices.each do |choice| %>
+          <%= fields_for choice, index: choice.id do |single_choice| %>
+            <input type="radio" name="choices[<%= question.id %>]" value ="<%= choice.id %>">
+            <%= render partial: 'choices/choice', locals: {choice: choice} %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <%= hidden_field_tag(:survey_taken_id, @generated_survey.id) %> 
+<%= submit_tag "Submit answer" %>
+<% end %>

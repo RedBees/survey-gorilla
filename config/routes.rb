@@ -13,9 +13,12 @@ Rails.application.routes.draw do
 
   resources :surveys
 
+  resources :selections
+
   get 'take/:id' => 'survey_takers#take', as: :take_survey
   get 'take/:id/thankyou' => 'survey_takers#thank_you', as: :thank_you
 
+  post 'taken' => 'survey_takers#taken', as: :taken_survey
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
