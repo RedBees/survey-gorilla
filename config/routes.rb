@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   # Example of regular route:
+
+  get 'signup' => 'users#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
 

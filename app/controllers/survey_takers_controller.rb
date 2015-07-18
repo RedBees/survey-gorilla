@@ -5,9 +5,6 @@ class SurveyTakersController < ApplicationController
   end
 
   def create
-    p "******************"
-    p params
-    p "******************"
     generated_survey = SurveyTaker.new(survey_id: params[:survey_id],taker_id: params[:taker_id])
     if generated_survey.save
       redirect_to take_survey_path(generated_survey)
