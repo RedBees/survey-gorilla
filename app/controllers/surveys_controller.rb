@@ -1,5 +1,9 @@
 class SurveysController < ApplicationController
 
+  def index
+    @surveys = Survey.all
+  end
+
   def show
     @survey = Survey.find_by(id: params[:id])
   end
