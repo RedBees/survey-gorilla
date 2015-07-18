@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   # Example of regular route:
+
+  get 'signup' => 'users#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
 
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :selections
 
+  post 'taking' => 'survey_takers#create'
   get 'take/:id' => 'survey_takers#take', as: :take_survey
   get 'take/:id/thankyou' => 'survey_takers#thank_you', as: :thank_you
 
