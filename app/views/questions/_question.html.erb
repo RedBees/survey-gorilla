@@ -1,0 +1,6 @@
+<%= question.body %>
+<div class="choices">
+  <% question.choices.each do |choice| %>
+    <%= render partial: 'choices/choice', locals: {choice: choice} %>
+  <% end %>
+<div>
