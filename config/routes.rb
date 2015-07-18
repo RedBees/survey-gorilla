@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :surveys
 
+  post 'taking' => 'survey_takers#create'
   get 'take/:id' => 'survey_takers#take', as: :take_survey
   get 'take/:id/thankyou' => 'survey_takers#thank_you', as: :thank_you
 
