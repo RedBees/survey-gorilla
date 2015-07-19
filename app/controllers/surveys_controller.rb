@@ -24,9 +24,22 @@ class SurveysController < ApplicationController
     end
   end
 
+  def edit
+    @survey = Survey.find_by(id: params[:id])
+  end
+
+  def update
+    survey = Survey.find_by(id: params[:id])
+    if survey.update(survey_params)
+      redirect_to survey, notice: 'Survey successfully updated.'
+    else
+      redirect_to edit_survey_path(survey)
+    end
+  end
+
   private
 
   def survey_params
-    params.require(:survey).permit(:title, :completion_message, questions_attributes: [:id, :body, choices_attributes: [:id, :body]] )
+    params.require(:survey).permit(:title, :completion_message, questions_attributes: [:id, :body, :_destroy, choices_attributes: [:id, :body,:_destroy]] )
   end
 end

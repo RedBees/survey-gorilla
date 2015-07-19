@@ -4,7 +4,7 @@
   <%= image_tag "gorilla.png",  {:style =>'float: right;'} %>
   </div>
   <div id="nav_right">
- <%= render 'shared/flash_messages' %>
+ <%= render 'shared/flash_messages', {:style =>'padding-right: 10px;'} %>
   <% if session[:user_id] %>
   <%= link_to "Find a Survey", surveys_path %>
   <%= link_to "Create Survey", new_survey_path %>

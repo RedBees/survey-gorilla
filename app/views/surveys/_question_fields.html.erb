@@ -1,0 +1,12 @@
+
+<div class="question_field">
+  <%= f.label "Question" %>
+  <%= f.text_field :body %>
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Remove Question" %>
+  <%= f.fields_for :choices do |choice| %>
+    <%= render 'choice_fields', f: choice %>
+  <% end %>
+  <%= link_to_add_fields "Add Choice", f, :choices %>
+</div>
+

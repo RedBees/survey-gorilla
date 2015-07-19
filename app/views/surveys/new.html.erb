@@ -1,22 +1,5 @@
 <div class="profile_container">
 <h2>New Survey</h2>
-<div class="form" id="new_survey">
-  <%= form_for @survey do |f| %>
-    <div class="form_fields" id="survey_title">
-      <%= f.label :title %>
-      <div><%= f.text_field :title %></div>
-    </div>
-    <div class="form_fields" id="question_body">
-      <%= f.fields_for :questions do |question| %>
-        <%= question.label "Question" %>
-        <div><%= question.text_field :body %></div><br>
-        <%= question.fields_for :choices do |choice| %>
-          <%= choice.label "Choice" %>
-          <div><%= choice.text_field :body %></div>
-        <% end %>
-      <% end %>
-    </div><br>
-    <%= f.submit %>
-  <% end %>
+<%= render 'form' %>
 </div>
-</div>
+
