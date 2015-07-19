@@ -1,20 +1,2 @@
 <h2>New Survey</h2>
-<div class="form" id="new_survey">
-  <%= form_for @survey do |f| %>
-    <div class="form_fields" id="survey_title">
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
-    <div class="form_fields" id="question_body">
-      <%= f.fields_for :questions do |question| %>
-        <%= question.label "Question" %>
-        <%= question.text_field :body %>
-        <%= question.fields_for :choices do |choice| %>
-          <%= choice.label "Choice" %>
-          <%= choice.text_field :body %>
-        <% end %>        
-      <% end %>
-    </div>
-    <%= f.submit %>    
-  <% end %>
-</div>
+<%= render 'form' %>
