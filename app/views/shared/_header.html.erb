@@ -1,12 +1,15 @@
 <header>
+  <div id="header">
  <div id="nav_left">
   <%= image_tag "gorilla.jpg" %>
+  <%= image_tag "barchart.png", {:style =>'float:right;'} %>
   </div>
   <div id="nav_right">
   <% if session[:user_id] %>
   <%= link_to "Create Survey", new_survey_path %>
   <%= link_to "Profile", user_path(session[:user_id]) %>
-    <%= link_to "logout", '/logout' %>
+    <%= link_to "Logout", '/logout' %>
   <% end %>
+</div>
 </div>
 </header>

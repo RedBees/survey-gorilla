@@ -1,6 +1,8 @@
+<div class="profile_container">
 <%= question.body %>
 <div class="choices">
   <% question.choices.each do |choice| %>
     <%= render partial: 'choices/choice', locals: {choice: choice} %>
   <% end %>
 <div>
+</div>

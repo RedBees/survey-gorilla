@@ -1,8 +1,10 @@
+<div class="profile_container">
 <% @surveys.each do |survey| %>
   <div><%= survey.title %></div>
   <%= form_tag controller: 'survey_takers', action: :create do %>
     <%= hidden_field_tag(:survey_id, survey.id) %>
     <%= hidden_field_tag(:taker_id, session[:user_id]) %>
-    <%= submit_tag "Take survey" %>
+    <%= submit_tag "Take survey" %><br>
   <% end %>
 <% end %>
+</div>

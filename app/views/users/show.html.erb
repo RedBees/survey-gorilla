@@ -1,6 +1,7 @@
+<div class="profile_container">
 <h2><%= @user.first_name %>'s Profile</h2>
 <div> <%= link_to "Edit Profile", edit_user_path %> </div>
-<table>
+<table class="gridtable">
   <tr>
     <th> Survey Name
     </th>
@@ -13,9 +14,12 @@
     <th> Options
     </th>
 </tr>
-<tr><td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td></tr>
-<tr> <td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td></tr>
-<tr> <td> blah</td> </tr>
+<tr><td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td></tr>
+<tr> <td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td></tr>
+<tr> <td> blah</td><td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td> </tr>
 </table>
-<%= link_to "Find a Survey", surveys_path %>
-<%= link_to "Create a New Survey", new_survey_path %>
+<br>
+<br>
+<%= link_to "Find a Survey", surveys_path, {:style=>'color:#505050;', :class => "link_tos"} %> |
+<%= link_to "Create a New Survey", new_survey_path, {:style=>'color:#505050;', :class => "link_tos"} %>
+</div>

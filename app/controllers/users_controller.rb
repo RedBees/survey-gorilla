@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to user, notice: "Account has been succesfully created!"
+      redirect_to user, notice: "Account has been successfully created!"
     else
       redirect_to new_user_path, flash: {error: "Signup failed"}
     end

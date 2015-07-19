@@ -1,6 +1,8 @@
+<div class="profile_container">
 <h2><%= @survey.title %></h2>
 <div class="questions">
   <% @survey.questions.each do |question| %>
     <%= render partial: 'questions/question', locals: {question: question} %>
   <% end %>
+</div>
 </div>
