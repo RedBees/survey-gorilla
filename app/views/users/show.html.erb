@@ -6,14 +6,24 @@
     </th>
     <th> Created At
     </th>
-    <th> Status
-    </th>
-    <th> Taken
+    <th> Finished
     </th>
     <th> Options
     </th>
 </tr>
-<tr><td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td></tr>
+<tr> <% @surveys.all.each do |survey| %>
+            <% if survey.creator_id ==  @user.id %>
+                <td> <%= survey.title %> </td>
+                <td> <%= survey.created_at%> </td>
+                <td> <%= survey.status %> </td>
+                <td> <%= link_to "Edit Survey", edit_survey_path %> </td>
+                <td> <%= link_to "See Survey", survey_path %> </td></tr>
+            <% end %>
+        <% end %><td>
+</td>
+
+
+</tr>
 <tr> <td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td></tr>
 <tr> <td> blah</td> </tr>
 </table>
