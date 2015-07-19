@@ -61,6 +61,21 @@ h2 {
   position: relative;
 }
 
+footer {
+    position: relative; /* formerly fixed!*/
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    /*background-color: white;*/
+    /*border-top-color: #ffffff;
+    border-top-style: solid;
+    border-top-width: 1px;*/
+    z-index: 1000;
+    padding: 10px;
+}
+
 #welcome_container {
   width: 100%;
   background-color: #789928;

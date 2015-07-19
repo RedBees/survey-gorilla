@@ -9,12 +9,13 @@
 <nav>
   <ul>
   <li><%= render 'shared/header' %></li>
-  <li><%= render 'shared/flash_messages' %></li>
 </ul>
 </nav>
 <body>
   <div class="container">
+  <%= render 'shared/flash_messages' %>
 <%= yield %>
 </div>
+<%= render 'shared/footer' %>
 </body>
 </html>
