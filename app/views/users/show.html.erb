@@ -8,8 +8,6 @@
     </th>
     <th> Finished
     </th>
-    <th> Taken
-    </th>
     <th> Options
     </th>
 </tr>
@@ -18,8 +16,8 @@
                 <td> <%= survey.title %> </td>
                 <td> <%= survey.created_at%> </td>
                 <td> <%= survey.status %> </td>
-                <td> <%= link_to edit_survey_path %> </td>
-                <td> <%= link_to survey_path %> </td></tr>
+                <td> <%= link_to "Edit Survey", edit_survey_path %> </td>
+                <td> <%= link_to "See Survey", survey_path %> </td></tr>
             <% end %>
         <% end %><td>
 </td>
