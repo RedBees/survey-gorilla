@@ -4,18 +4,18 @@
   <%= form_for @survey do |f| %>
     <div class="form_fields" id="survey_title">
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <div><%= f.text_field :title %></div>
     </div>
     <div class="form_fields" id="question_body">
       <%= f.fields_for :questions do |question| %>
         <%= question.label "Question" %>
-        <%= question.text_field :body %><br><br>
+        <div><%= question.text_field :body %></div><br>
         <%= question.fields_for :choices do |choice| %>
           <%= choice.label "Choice" %>
-          <%= choice.text_field :body %>
+          <div><%= choice.text_field :body %></div>
         <% end %>
       <% end %>
-    </div>
+    </div><br>
     <%= f.submit %>
   <% end %>
 </div>
