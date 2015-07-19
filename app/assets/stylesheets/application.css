@@ -13,3 +13,95 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: "HelveticaNeue-Light", sans-serif;
+}
+
+header {
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    /*background: #00CCCC;*/
+    background: #FFFFFF;
+    color: #0000FF;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    z-index: 100;
+    opacity: 100;
+}
+nav ul li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 3.875em;
+  padding: 0 5%;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 200px;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+#welcome_container {
+  width: 100%;
+  background-color: #789928;
+}
+
+#welcome_login {
+  margin: 0 auto;
+  width: 400px;
+}
+
+
+#nav_right {
+  float: right;
+}
+
+#nav_left {
+  float: left;
+}
+
+#welcome {
+  margin: 0 auto;
+  width: 70%;
+  height: 400px;
+  position: relative;
+}
+
+a {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+input[type=text] {padding:5px; border:2px solid #ccc;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+input[type=text]:focus {border-color:#333; }
+input[type=password] {padding:5px; border:2px solid #ccc;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+input[type=password]:focus {border-color:#333; }
+
+input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
+cursor:pointer;
+-webkit-border-radius: 5px;
+border-radius: 5px; }

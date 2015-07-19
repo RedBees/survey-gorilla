@@ -1,9 +1,12 @@
 <header>
-
+ <div id="nav_left">
+  <%= image_tag "gorilla.jpg" %>
+  </div>
+  <div id="nav_right">
   <% if session[:user_id] %>
   <%= link_to "Create Survey", new_survey_path %>
   <%= link_to "Profile", user_path(session[:user_id]) %>
     <%= link_to "logout", '/logout' %>
   <% end %>
-
+</div>
 </header>

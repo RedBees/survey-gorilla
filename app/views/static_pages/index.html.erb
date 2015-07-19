@@ -1,14 +1,19 @@
-<h2>Welcome to Survey Gorilla</h2>
-
-<%= form_tag controller: 'sessions', action: :create do %>
-  <div class="form_fields">
-    <%= label_tag :username %>
-    <%= text_field_tag :username %>
+<section id="welcome_container">
+  <div id="welcome">
+  <h1>Welcome to Survey Gorilla</h1>
+  <div id="welcome_login">
+  <%= form_tag controller: 'sessions', action: :create do %>
+    <div class="form_fields">
+      <%= label_tag :username %>
+      <%= text_field_tag :username %>
+    </div><br>
+    <div class="form_fields">
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+    </div>
+    <%= submit_tag "Login" %>
+  <% end %><br>
+  <%= link_to "Or Sign Up", new_user_path %>
+</div>
   </div>
-  <div class="form_fields">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <%= submit_tag "Login" %>
-<% end %>
-<%= link_to "Or Sign Up", new_user_path %>
+</section>
