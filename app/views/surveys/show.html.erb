@@ -1,8 +1,10 @@
 <div class="profile_container">
 <h2><%= @survey.title %></h2>
 <div class="questions">
+  <ol>
   <% @survey.questions.each do |question| %>
-    <%= render partial: 'questions/question', locals: {question: question} %>
+    <li><%= render partial: 'questions/question', locals: {question: question} %></li>
   <% end %>
+</ol>
 </div>
 </div>

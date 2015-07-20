@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
   has_many :selections
 
   validates :username, :password, :first_name, :last_name, presence: true
+
+  def created_surveys
+    Survey.where(creator_id: self.id)
+  end
 end

@@ -1,21 +1,25 @@
 <div class="profile_container">
 <h2><%= @user.first_name %>'s Profile</h2>
 <table class="gridtable">
-  <tr>
-    <th> Survey Name
-    </th>
-    <th> Created At
-    </th>
-    <th> Status
-    </th>
-    <th> Taken
-    </th>
-    <th> Options
-    </th>
-</tr>
-<tr><td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td></tr>
-<tr> <td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td></tr>
-<tr> <td> blah</td><td> blah</td> <td> blah</td> <td> blah</td> <td> blah</td> </tr>
+    <tr>
+        <th> Survey Name</th>
+        <th> Created At</th>
+        <th> Status</th>
+        <th> Taken</th>
+        <th> Options</th>
+    </tr>
+    <% @user.created_surveys.each do |survey| %>
+    <tr>
+        <td><%= survey.title %></td>
+        <td><%= survey.created_at %></td>
+        <td><%= survey.status %></td>
+        <td><%= SurveyTaker.where(survey_id: survey.id).count %></td>
+        <td>
+            <%= link_to "Edit", edit_survey_path(survey) %></br>
+            Stats
+        </td>
+    </tr>
+    <% end %>
 </table>
 <br>
 <br>

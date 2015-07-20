@@ -94,6 +94,14 @@ footer {
   text-align: right;
 }
 
+li {
+  margin-top: 0;
+}
+
+li .profile_container {
+  margin-top: -18px;
+}
+
 #welcome {
   display: flex;
   flex-direction: column;
