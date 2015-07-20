@@ -3,14 +3,13 @@
  <div id="nav_left">
   <%= image_tag "gorilla.png",  {:style =>'float: right;'} %>
   </div>
-  <div id="nav_right">
- <%= render 'shared/flash_messages', {:style =>'padding-right: 10px;'} %>
-  <% if session[:user_id] %>
-  <%= link_to "Find a Survey", surveys_path %>
-  <%= link_to "Create Survey", new_survey_path %>
-  <%= link_to "Profile", user_path(session[:user_id]) %>
-    <%= link_to "Logout", '/logout' %>
-  <% end %>
-</div>
+  <nav id="nav_right">
+    <% if session[:user_id] %>
+    <%= link_to "Find a Survey", surveys_path %>
+    <%= link_to "Create Survey", new_survey_path %>
+    <%= link_to "Profile", user_path(session[:user_id]) %>
+      <%= link_to "Logout", '/logout' %>
+    <% end %>
+  </nav>
 </div>
 </header>

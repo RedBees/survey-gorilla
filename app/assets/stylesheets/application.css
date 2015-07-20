@@ -16,19 +16,26 @@
 body {
   font-family: "HelveticaNeue-Light", sans-serif;
   color: #505050;
+  margin: 0;
 }
 
 #header {
-    position: fixed;
-    height: 90px;
-    width: 100%;
-    color: #0000FF;
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    z-index: 100;
-    opacity: 100;
+  background-color: #FFF;
+  height: 40px;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
+
+div {
+  margin: 10px auto;
+}
+
+div.choice_field {
+  margin-left: 20px;
+}
+
 nav ul li {
   display: inline;
   margin: 30px;
@@ -55,8 +62,8 @@ h2 {
   margin: 0 auto;
   padding-top: 170px;
   width: 100%;
-  height: 400px;
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -72,9 +79,10 @@ footer {
 
 .profile_container {
   margin: 0 auto;
-  width: 400px;
-  height: 400px;
   color: #505050;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .profile_container > h2 {
@@ -86,6 +94,12 @@ footer {
   text-align: right;
 }
 
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #welcome_container {
   width: 100%;
   background-color: #789928;
@@ -93,7 +107,15 @@ footer {
 
 #welcome_login {
   margin: 0 auto;
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #welcome_login  label {
@@ -115,11 +137,8 @@ footer {
   float: left;
 }
 
-#welcome {
-  margin: 0 auto;
-  width: 70%;
-  height: 400px;
-  position: relative;
+#header {
+  padding-top: 20px;
 }
 
 header a {
@@ -127,16 +146,9 @@ header a {
 }
 
 a {
-  color: white;
+  font-weight: 700;
   text-decoration: none;
-}
-
-a:active {
-  color: white;
-}
-
-a:visited {
-  color: white;
+  color: #d3d3d3;
 }
 
 a:hover {
@@ -170,6 +182,10 @@ table.gridtable td {
 
 }
 
+input {
+  min-width: 200px;
+}
+
 input[type="text"] {
   padding: 10px;
   border: solid 1px #dcdcdc;
@@ -197,7 +213,10 @@ input[type="password"].focus {
 }
 
 
-input[type=submit] {padding:5px 15px; background:beige; border:1 none;
-cursor:pointer;
--webkit-border-radius: 5px;
-border-radius: 5px; }
+input[type=submit] {
+  padding:5px 15px; background:beige; border:1 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  max-width: 200px;
+}
